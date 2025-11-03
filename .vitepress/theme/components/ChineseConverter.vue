@@ -59,7 +59,7 @@ onMounted(() => {
   }
 
   const script = document.createElement('script')
-  script.src = 'https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/opencc.min.js'
+  script.src = '/libs/opencc.min.js'
   script.onload = () => {
     // OpenCC 加载完成
     openccLoaded.value = true

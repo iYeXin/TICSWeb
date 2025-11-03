@@ -8,7 +8,7 @@ import Furigana from './components/Furigana.vue'
 import HomePage from './components/HomePage.vue'
 import ChineseConverter from './components/ChineseConverter.vue'
 import Switch from './switch.vue'
-import notfound from './NotFound.vue'
+import NotFound from './NotFound.vue'
 
 
 export default {
@@ -16,6 +16,7 @@ export default {
   extends: DefaultTheme,
   // 使用注入插槽的包装组件覆盖 Layout
   Layout: Switch,
+  NotFound,
   enhanceApp({ app }) {
     app.component('GeneralMembersList', GeneralMembersList)
     app.component('Hitokoto', Hitokoto)

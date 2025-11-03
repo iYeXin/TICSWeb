@@ -5,6 +5,7 @@ layout: page
 <script setup>
 import { VPTeamPage, VPTeamPageTitle, VPTeamMembers, VPTeamPageSection } from 'vitepress/theme'
 import GeneralMembersList from '../.vitepress/theme/components/GeneralMembersList.vue'
+import MembersOverlay from '../.vitepress/theme/components/MembersOverlay.vue'
 
 // window.location.replace('../../')
 const getDateTime = () => {
@@ -161,7 +162,7 @@ const honoraryMembers = [
     avatar: 'https://q.qlogo.cn/g?b=qq&nk=1807229848&s=100?t='  + getDateTime(),
     name: '春秋代序',
     title: '原历史组代负责人',
-    desc: '2025年1月加入原提研院，在历史组负责内容编辑工作，是《提瓦特编年史》项目的重要贡献者之一，带领组内成员完成众多作品，现因工作原因退做顾问',
+    desc: '2025年1月加入原提研院，在历史组负责内容编辑工作，是《提瓦特编年史》项目的重要贡献者之一，带领组内成员完成众多作品，现因工作原因退做顾问。',
   },
   {
     avatar: 'https://q.qlogo.cn/g?b=qq&nk=1424876464&s=100?t='  + getDateTime(),
@@ -178,6 +179,7 @@ const honoraryMembers = [
       成员列表
     </template>
   </VPTeamPageTitle>
+  <MembersOverlay />
   <VPTeamPageSection>
     <template #title>常务委员</template>
     <template #lead>常务委员是全社的核心领导层，主持全社大局，领导全社工作。<br><br>以下所展示的是现任的常务委员。</template>
