@@ -1,0 +1,40 @@
+name: VitePress Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+      # 拉取仓库
+      - uses: actions/checkout@v4
+
+      # 设置 Node.js 版本并缓存依赖
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      # 安装依赖
+      - run: npm ci
+
+      # 构建 VitePress（生成静态 HTML）
+      - name: Build VitePress site
+        run: npx vitepress build
+
+      # 可选：上传构建结果为 artifact（可以在 Actions 页面下载 HTML）
+      - name: Upload built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: vitepress-dist
+          path: docs/.vitepress/dist
