@@ -8,6 +8,7 @@
     "vitepress": "^1.4.0"
   },
   "scripts": {
+    "build": "vitepress build",
     "docs:dev": "vitepress dev --host",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
