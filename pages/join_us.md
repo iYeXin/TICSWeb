@@ -2,6 +2,9 @@
 outline: false
 ---
 
+<div class="join-overlay"><div class="join-overlay-content">我们暂时不接受新人加入</div></div>
+
+
 <div style="display: flex; align-items: center;">
   <img src="/head&favicon.png" alt="icon" width="50" height="50" style="margin-right: 10px;">
   <span style="font-size: 45px; vertical-align: middle;">招贤纳士</span>
